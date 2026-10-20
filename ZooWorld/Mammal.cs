@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ZooWorld
 {
-    // Mammal class, extends animal, adds furcolor, furtype and implementations for animal abstracts (my compiler gets mad if I dont)
-    public class Mammal : Animal
+    // Mammal class, extends animal, adds furcolor, furtype
+    public abstract class Mammal : Animal
     {
         private string furColor = string.Empty;
         private string furType = string.Empty;
@@ -19,14 +19,6 @@ namespace ZooWorld
             if (string.IsNullOrEmpty(FurType)) { throw new ArgumentNullException("Fur type not found"); }
             this.furType = FurType;
             this.furColor = FurColor;
-        }
-        public override string GetSpeed()
-        {
-            throw new NotImplementedException();
-        }
-        public override string GetNoise()
-        {
-            throw new NotImplementedException();
         }
         public override string Describe()
         {
