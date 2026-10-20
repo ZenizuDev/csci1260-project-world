@@ -5,7 +5,6 @@
 #
 # A green check means your program built and ran to the end cleanly.
 # A red X means it did not compile, crashed, printed nothing, or waited
-# for keyboard input. Click the X to read why.
 name: Build and Run
 on:
 push:
