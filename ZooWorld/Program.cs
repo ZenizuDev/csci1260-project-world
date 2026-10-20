@@ -97,7 +97,7 @@ namespace ZooWorld
             List<ActivityRecord> records = new List<ActivityRecord>
             {
                 new ActivityRecord(1, "Wolf", 4),
-                new ActivityRecord(2,"Owl", 3),
+                new ActivityRecord(1,"Owl", 3),
                 new ActivityRecord(1,"Bat", 1),
                 new ActivityRecord(3,"Wolf", 5),
                 new ActivityRecord(2,"Owl", 4)
@@ -146,14 +146,15 @@ namespace ZooWorld
                 {
                     Console.WriteLine(log.Log(new ActivityRecord(0, "Wolf", 4)));
                     Console.WriteLine(log.Log(new ActivityRecord(0, "Owl", 3)));
-                    throw new InvalidOperationException("Feeding station jammed.");
+                    Console.WriteLine(log.Log(new ActivityRecord(-1, "Owl", 3)));
                 }
             }
-            catch (InvalidOperationException ex)
+            catch (ArgumentOutOfRangeException ex)
             {
-                Console.WriteLine($"Caught inside the log demo: {ex.Message}");
+                Console.WriteLine($"Caught inside the log demo: {ex.Message} at {DateTime.Now.ToString()}");
             }
-
+            Thread.Sleep(1000);
+            Console.WriteLine($"trying to dispose log again, at {DateTime.Now.ToString()}");
             log.Dispose();
 
             Console.WriteLine("--- Finished log file ---");
