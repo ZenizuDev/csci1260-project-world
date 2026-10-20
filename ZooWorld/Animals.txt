@@ -1,0 +1,8 @@
+Bat,Basil,2,0.1,brown,short,20,erratic
+Bobcat,Bella,8,18,tan,spotted,30
+Wolf,Luna,14,40,gray,thick,40
+Wolf,Fang,-5,45,gray,thick,40
+Owl,Hoot,3,1.2,40,silent glide
+Parrot,Polly,3,0.9,25,straight
+Parrot,Kiwi,3,0.4
+Owl,Sage,3,1.5,35,
